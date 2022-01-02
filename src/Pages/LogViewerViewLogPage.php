@@ -12,7 +12,7 @@ use Jackiedo\LogReader\Facades\LogReader;
 use Rabol\FilamentLogviewer\Models\LogFile;
 use Filament\Tables\Concerns\InteractsWithTable;
 
-class LogViewerPage extends Page implements Tables\Contracts\HasTable
+class LogViewerViewLogPage extends Page implements Tables\Contracts\HasTable
 {
     use InteractsWithTable;
 
@@ -26,6 +26,11 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         return [
             
         ];
+    }
+
+    public function mount($id): void
+    {
+        dd($id);
     }
 
     public function viewLogFile($logFile)
@@ -56,8 +61,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         return [
             Tables\Actions\LinkAction::make('viewlogfile')
             ->label('View')
-            ->url(fn (LogFile $record): string => LogViewerViewLogPage::getUrl([$record->id])),
-           
+            ->action('viewLogFile')
         ];
     }
  
