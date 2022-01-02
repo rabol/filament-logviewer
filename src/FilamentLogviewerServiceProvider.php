@@ -3,16 +3,13 @@
 namespace Rabol\FilamentLogviewer;
 
 use Filament\PluginServiceProvider;
-use Rabol\Pages\LogViewerPage;
-use Rabol\FilamentLogviewer\Classes\Package;
-use Rabol\FilamentLogviewer\Traits\ServiceProvider;
+use Rabol\FilamentLogviewer\Pages\LogViewerPage;
 use Rabol\FilamentLogviewer\Commands\FilamentLogviewerCommand;
 
 class FilamentLogviewerServiceProvider extends PluginServiceProvider
 {
-    use ServiceProvider;
 
-    public static string $name = 'log-viewer';
+    public static string $name = 'filament-log-viewer';
  
     protected function getPages(): array
     {
@@ -24,7 +21,7 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
     protected function getWidgets(): array
     {
         return [
-            LogViewerWidget::class,
+            //LogViewerWidget::class,
         ];
     }
 
@@ -55,13 +52,11 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
             //Commands\CustomCommand::class,
         ];
     }
+
+  /*
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
+        
         $package
             ->name('filament-logviewer')
             ->hasConfigFile()
@@ -69,4 +64,5 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
             ->hasMigration('create_filament-logviewer_table')
             ->hasCommand(FilamentLogviewerCommand::class);
     }
+    */
 }
