@@ -2,14 +2,15 @@
 
 namespace Rabol\FilamentLogviewer\Pages;
 
-use Filament\Pages\Page;
-use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables;
+use Filament\Pages\Page;
+use Filament\Tables\Actions\LinkAction;
 
+use Filament\Pages;
+use Illuminate\Database\Eloquent\Builder;
 use Jackiedo\LogReader\Facades\LogReader;
 use Rabol\FilamentLogviewer\Models\LogFile;
-use Illuminate\Database\Eloquent\Builder;
-use Filament\Tables\Actions\LinkAction;
+use Filament\Tables\Concerns\InteractsWithTable;
 
 class LogViewerPage extends Page implements Tables\Contracts\HasTable
 {
@@ -20,11 +21,6 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
     protected static string $view = 'filament-log-viewer::log-viewer';
     
 
-    public function mount(): void
-    {
-
-    }
-
     protected function getActions(): array
     {
         return [
@@ -32,9 +28,9 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         ];
     }
 
-    public function viewLogFile()
+    public function viewLogFile($logFile)
     {
-
+        dd($logFile);
     }
 
     protected function getTableQuery(): Builder 
@@ -46,8 +42,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
     {
         return [
             Tables\Columns\TextColumn::make('name')
-            ->searchable()
-            
+            ->searchable()            
         ];
     }
  
