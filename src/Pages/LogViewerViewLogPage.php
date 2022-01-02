@@ -16,9 +16,11 @@ class LogViewerViewLogPage extends Page implements Tables\Contracts\HasTable
 {
     use InteractsWithTable;
 
+    public $record;
+
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament-log-viewer::log-viewer';
+    protected static string $view = 'filament-log-viewer::log-viewer-view';
     
 
     protected function getActions(): array
@@ -28,9 +30,10 @@ class LogViewerViewLogPage extends Page implements Tables\Contracts\HasTable
         ];
     }
 
-    public function mount($id): void
+    public function mount(LogFile $record): void
     {
-        dd($id);
+        dd($record);
+        //dd($id);
     }
 
     public function viewLogFile($logFile)

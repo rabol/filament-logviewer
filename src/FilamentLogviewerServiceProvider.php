@@ -4,8 +4,9 @@ namespace Rabol\FilamentLogviewer;
 
 use Filament\PluginServiceProvider;
 use Rabol\FilamentLogviewer\Pages\LogViewerPage;
-use Rabol\FilamentLogviewer\Commands\FilamentLogviewerCommand;
 use Rabol\FilamentLogviewer\Pages\LogViewerViewLogPage;
+use Rabol\FilamentLogviewer\Commands\FilamentLogviewerCommand;
+
 
 class FilamentLogviewerServiceProvider extends PluginServiceProvider
 {

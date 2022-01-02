@@ -12,6 +12,12 @@ class LogFile extends Model
 {
     use Sushi;
 
+    protected $schema = [
+        'id' => 'integer',
+        'name' => 'string',
+        'path' => 'string',
+    ];
+
     public function getRows()
     {
         //dd(LogReader::getLogFilenameList());
@@ -24,7 +30,7 @@ class LogFile extends Model
                 'path' => $value,
             ]; 
         }
-        
+
         return $rows;
     }
 }
