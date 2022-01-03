@@ -26,9 +26,18 @@
         @if($logEntries)
             @foreach ($logEntries as $logEntry)
             <tr>
-                <td>{{$logEntry->date}}</td>
+                <td><span class="bg-danger-500">{{$logEntry->date}}</span></td>
                 <td>{{$logEntry->environment}}</td>
-                <td>{{$logEntry->level}}</td>
+                <td>
+                {{debug($logEntry->level)}}
+                @if($logEntry->level == 'error')
+                    <span class="text-xs px-3 bg-primary-200 text-gray-800 rounded-full">{{$logEntry->level}}</span>
+                @elseif($logEntry->level == 'debug')
+                    <span class="text-xs px-3 bg-primary-500 text-gray-800 rounded-full">{{$logEntry->level}}</span>
+                @else
+                    <span class="text-xs px-3 bg-primary-800 text-gray-800 rounded-full">{{$logEntry->level}}</span>
+                @endif
+                </td>
                 {{--<td>{{$logEntry->file_path}}</td>--}}
                 <td>{{ \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)')}}</td>
                 <td>
