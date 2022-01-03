@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npx tailwindcss -i ./resources/css/input.css -o ./resources/css/dist/filament-logviewer.css",
+    "watch": "npx tailwindcss -i ./resources/css/input.css -o ./resources/css/dist/filament-logviewer.css --watch"
+},
+  "devDependencies": {
+    "tailwindcss": "^3.0.9"
+  }
+}

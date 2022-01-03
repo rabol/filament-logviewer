@@ -17,7 +17,7 @@
                 <td>Level</td>
                 {{--<td>File path</td>--}}
                 <td>Context</td>
-                <td>Details</td>
+                <td>Stack trace</td>
             </tr>
         </thead>
     
@@ -25,7 +25,7 @@
     <tbody class="divide-y whitespace-nowrap text-sm">
         @if($logEntries)
             @foreach ($logEntries as $logEntry)
-            <tr class="h-10">
+            <tr>
                 <td><span class="">{{$logEntry->date}}</span></td>
                 <td>{{$logEntry->environment}}</td>
                 <td>
@@ -40,9 +40,11 @@
                 {{--<td>{{$logEntry->file_path}}</td>--}}
                 <td>{{ \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)')}}</td>
                 <td>
-                
-                <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['logEntryId' => $logEntry->id])}}" class="bg-amber-400 p-2 text-white rounded-md hover:shadow-lg text-xs font-thin">details</a>
-                
+                @if($logEntry->stack_traces && $logEntry->stack_traces->count())
+                    Show stack trace
+                @else
+                    No stacktrace
+                @endif
                 </td>
             </tr>
             @endforeach

@@ -6,7 +6,7 @@ use Filament\PluginServiceProvider;
 use Rabol\FilamentLogviewer\Pages\LogViewerPage;
 use Rabol\FilamentLogviewer\Pages\LogViewerViewLogPage;
 use Rabol\FilamentLogviewer\Commands\FilamentLogviewerCommand;
-
+use Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage;
 
 class FilamentLogviewerServiceProvider extends PluginServiceProvider
 {
@@ -18,6 +18,7 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
         return [
             LogViewerPage::class,
             LogViewerViewLogPage::class,
+            LogViewerViewDetailsPage::class,
         ];
     }
 
@@ -31,6 +32,7 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
     protected function getStyles(): array
     {
         return [
+            'filament-log-viewer-styles' => __DIR__ . '/../resources/css/dist/filament-logviewer.css',
         ];
     }
 
