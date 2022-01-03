@@ -20,7 +20,6 @@ class LogFile extends Model
 
     public function getRows()
     {
-        //dd(LogReader::getLogFilenameList());
         $logFiles = LogReader::getLogFilenameList();
         $i = 1;
         foreach($logFiles as $key => $value) {

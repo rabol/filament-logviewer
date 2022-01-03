@@ -2,80 +2,63 @@
 
 namespace Rabol\FilamentLogviewer\Pages;
 
+use Closure;
+use Filament\Pages;
 use Filament\Tables;
 use Filament\Pages\Page;
+use Illuminate\Support\Facades\Route;
 use Filament\Tables\Actions\LinkAction;
-
-use Filament\Pages;
+use Filament\Pages\Actions\ButtonAction;
 use Illuminate\Database\Eloquent\Builder;
 use Jackiedo\LogReader\Facades\LogReader;
 use Rabol\FilamentLogviewer\Models\LogFile;
 use Filament\Tables\Concerns\InteractsWithTable;
+use Rabol\FilamentLogviewer\Models\LogFileEntry;
 
-class LogViewerViewLogPage extends Page implements Tables\Contracts\HasTable
+
+class LogViewerViewLogPage extends Page 
 {
-    use InteractsWithTable;
-
-    public $record;
+    private $logEntries;
+    private $log;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static string $view = 'filament-log-viewer::log-viewer-view';
     
+    protected static bool $shouldRegisterNavigation = false;
 
+    protected static ?string $title = 'test';
     protected function getActions(): array
     {
         return [
-            
+            ButtonAction::make('back')
+                ->label('Back')
+                ->url(LogViewerPage::getUrl()),
         ];
     }
 
     public function mount(LogFile $record): void
     {
-        dd($record);
-        //dd($id);
+        $this->log = LogReader::filename($record->name);
+        $this->logEntries = $this->log->get(); // we need to paginate...
+        self::$title = 'Log file: ' . $record->name;
     }
-
-    public function viewLogFile($logFile)
-    {
-        dd($logFile);
-    }
-
-    protected function getTableQuery(): Builder 
-    {
-        return LogFile::query();
-    } 
-     
-    protected function getTableColumns(): array 
-    {
-        return [
-            Tables\Columns\TextColumn::make('name')
-            ->searchable()            
-        ];
-    }
- 
-    protected function getTableFilters(): array
-    {
-        return [];
-    }
- 
-    protected function getTableActions(): array
-    {
-        return [
-            Tables\Actions\LinkAction::make('viewlogfile')
-            ->label('View')
-            ->action('viewLogFile')
-        ];
-    }
- 
-    protected function getTableBulkActions(): array
-    {
-        return [];
-    } 
-
 
     protected function getViewData(): array
     {
-        return [];
+        return [
+            'header' => null,
+            'footer' => null,
+            'logEntries' => $this->logEntries,
+            'log' => $this->log,
+        ];
+    }
+    
+    public static function getRoutes(): Closure
+    {
+        return function () {
+            $slug = static::getSlug();
+            Route::get("{$slug}/{record?}", static::class)->name($slug);
+        };
     }
 }
