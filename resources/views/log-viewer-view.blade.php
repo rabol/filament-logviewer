@@ -5,57 +5,72 @@
                 Log Files - view
             </h2>
         </x-slot>
-    <div>
-
-    <div class="">
-    <table class="w-full text-left rtl:text-right divide-y table-auto">
-    
-        <thead>
-            <tr class="bg-gray-50">
-                <td>Date</td>
-                <td>Environment</td>
-                <td>Level</td>
-                {{--<td>File path</td>--}}
-                <td>Context</td>
-                <td>Details</td>
-            </tr>
-        </thead>
-    
-
-    <tbody class="divide-y whitespace-nowrap text-sm">
-        @if($logEntries)
-            @foreach ($logEntries as $logEntry)
-            <tr class="h-10">
-                <td><span class="">{{$logEntry->date}}</span></td>
-                <td>{{$logEntry->environment}}</td>
-                <td>
-                @if($logEntry->level == 'error')
-                    <span class="text-xs px-3 bg-danger-600 text-white rounded-full">{{$logEntry->level}}</span>
-                @elseif($logEntry->level == 'debug')
-                    <span class="text-xs px-3 bg-warning-600 text-gray-800 rounded-full">{{$logEntry->level}}</span>
-                @else
-                    <span class="text-xs px-3 bg-primary-600 text-gray-800 rounded-full">{{$logEntry->level}}</span>
-                @endif
+        <table class="w-full divide-y divide-gray-200">
+            <thead class="bg-gray-100">
+            <tr>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</td>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Environment
                 </td>
-                {{--<td>{{$logEntry->file_path}}</td>--}}
-                <td>{{ \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)')}}</td>
-                <td>
-                
-                <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['recordId' => $logEntry->id,'fileName'=> $filename])}}" class="bg-success-600 p-2 text-white rounded-md hover:shadow-lg text-xs font-thin">details</a>
-                
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level
                 </td>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Context
+                </td>
+                <td></td>
             </tr>
-            @endforeach
-        @endif
-    </tbody>
+            </thead>
 
-    @if ($footer)
-        <tfoot>
-            <tr class="bg-gray-50">
-                {{ $footer }}
-            </tr>
-        </tfoot>
-    @endif
-</table>
-    </div>    
+
+            <tbody class="bg-white divide-y divide-gray-200">
+            @if($logEntries)
+                @foreach ($logEntries as $logEntry)
+                    <tr>
+                        <td class="px-2 py-3 whitespace-nowrap">
+                            <span class="">{{$logEntry->date}}</span>
+                        </td>
+                        <td class="px-2 py-3 whitespace-nowrap">
+                            {{$logEntry->environment}}
+                        </td>
+                        <td class="px-2 py-3 whitespace-nowrap">
+                            @if($logEntry->level == 'error')
+                                <span
+                                    class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                                            {{Illuminate\Support\Str::title($logEntry->level)}}
+                                        </span>
+                            @elseif($logEntry->level == 'debug')
+                                <span
+                                    class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                                            {{Illuminate\Support\Str::title($logEntry->level)}}
+                                        </span>
+                            @else
+                                <span
+                                    class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                                            {{Illuminate\Support\Str::title($logEntry->level)}}
+                                        </span>
+                            @endif
+                        </td>
+                        {{--<td>{{$logEntry->file_path}}</td>--}}
+                        <td class="px-2 py-3 whitespace-nowrap">
+                            {{ \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)')}}
+                        </td>
+                        <td class="px-2 py-3 whitespace-nowrap">
+                            <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['recordId' => $logEntry->id,'fileName'=> $filename])}}"
+                               class="hover:underline focus:outline-none focus:underline text-primary-600 hover:text-primary-500 text-sm font-medium">
+                                View details
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+            @endif
+            </tbody>
+
+            @if ($footer)
+                <tfoot>
+                <tr class="bg-gray-50">
+                    {{ $footer }}
+                </tr>
+                </tfoot>
+            @endif
+        </table>
+    </div>
 </x-filament::page>
