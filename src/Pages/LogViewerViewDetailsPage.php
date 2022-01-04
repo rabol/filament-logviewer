@@ -44,9 +44,6 @@ class LogViewerViewDetailsPage extends Page
         $this->fileName = $fileName;
 
         $this->entry = LogReader::find($recordId);
-        debug($this->entry);
-        debug($recordId);
-        debug($fileName);
     }
 
     protected function getViewData(): array
