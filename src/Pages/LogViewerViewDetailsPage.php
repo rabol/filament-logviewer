@@ -14,12 +14,13 @@ use Jackiedo\LogReader\Facades\LogReader;
 use Rabol\FilamentLogviewer\Models\LogFile;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Rabol\FilamentLogviewer\Models\LogFileEntry;
-
+use stdClass;
 
 class LogViewerViewDetailsPage extends Page 
 {
-    private $logEntries;
-    private $log;
+    private $recordId;
+    private $fileName;
+    private $entry;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
@@ -27,33 +28,35 @@ class LogViewerViewDetailsPage extends Page
     
     protected static bool $shouldRegisterNavigation = false;
 
-    protected static ?string $title = 'test';
+    protected static ?string $title = 'Log details';
     protected function getActions(): array
     {
         return [
             ButtonAction::make('back')
                 ->label('Back')
-                ->url(LogViewerViewLogPage::getUrl()),
+                ->url(LogViewerViewLogPage::getUrl(['fileName' => $this->fileName])),
         ];
     }
 
-    public function mount(string $record): void
+    public function mount(string $recordId, string $fileName): void
     {
-        debug($record);
-        /*
-        $this->log = LogReader::filename($record->name);
-        $this->logEntries = $this->log->get(); // we need to paginate...
-        self::$title = 'Log file: ' . $record->name;
-        */
+        $this->recordId = $recordId;
+        $this->fileName = $fileName;
+
+        $this->entry = LogReader::find($recordId);
+        debug($this->entry);
+        debug($recordId);
+        debug($fileName);
     }
 
     protected function getViewData(): array
     {
         return [
-            'header' => null,
+            'header' => null, //'Log details: ' . $this->recordId . ' / ' . $this->fileName,
             'footer' => null,
-            'logEntries' => $this->logEntries,
-            'log' => $this->log,
+            'recordid' => $this->recordId,
+            'filename' => $this->fileName,
+            'entry' => $this->entry,
         ];
     }
     
@@ -61,7 +64,7 @@ class LogViewerViewDetailsPage extends Page
     {
         return function () {
             $slug = static::getSlug();
-            Route::get("{$slug}/{record?}", static::class)->name($slug);
+            Route::get("{$slug}/{recordId?}/{fileName?}", static::class)->name($slug);
         };
     }
 }

@@ -20,6 +20,7 @@ class LogViewerViewLogPage extends Page
 {
     private $logEntries;
     private $log;
+    private $fileName;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
@@ -27,7 +28,7 @@ class LogViewerViewLogPage extends Page
     
     protected static bool $shouldRegisterNavigation = false;
 
-    protected static ?string $title = 'test';
+    protected static ?string $title = 'View log file';
     protected function getActions(): array
     {
         return [
@@ -37,11 +38,12 @@ class LogViewerViewLogPage extends Page
         ];
     }
 
-    public function mount(LogFile $record): void
+    public function mount(string $fileName): void
     {
-        $this->log = LogReader::filename($record->name);
+        $this->log = LogReader::filename($fileName);
         $this->logEntries = $this->log->get(); // we need to paginate...
-        self::$title = 'Log file: ' . $record->name;
+        self::$title = 'Log file: ' . $fileName;
+        $this->fileName = $fileName;
     }
 
     protected function getViewData(): array
@@ -51,6 +53,7 @@ class LogViewerViewLogPage extends Page
             'footer' => null,
             'logEntries' => $this->logEntries,
             'log' => $this->log,
+            'filename' => $this->fileName,
         ];
     }
     
@@ -58,7 +61,7 @@ class LogViewerViewLogPage extends Page
     {
         return function () {
             $slug = static::getSlug();
-            Route::get("{$slug}/{record?}", static::class)->name($slug);
+            Route::get("{$slug}/{fileName?}", static::class)->name($slug);
         };
     }
 }

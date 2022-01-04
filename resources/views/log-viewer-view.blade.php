@@ -30,18 +30,18 @@
                 <td>{{$logEntry->environment}}</td>
                 <td>
                 @if($logEntry->level == 'error')
-                    <span class="text-xs px-3 bg-red-600 text-white rounded-full">{{$logEntry->level}}</span>
+                    <span class="text-xs px-3 bg-danger-600 text-white rounded-full">{{$logEntry->level}}</span>
                 @elseif($logEntry->level == 'debug')
-                    <span class="text-xs px-3 bg-warning-500 text-gray-800 rounded-full">{{$logEntry->level}}</span>
+                    <span class="text-xs px-3 bg-warning-600 text-gray-800 rounded-full">{{$logEntry->level}}</span>
                 @else
-                    <span class="text-xs px-3 bg-gray-200 text-gray-800 rounded-full">{{$logEntry->level}}</span>
+                    <span class="text-xs px-3 bg-primary-600 text-gray-800 rounded-full">{{$logEntry->level}}</span>
                 @endif
                 </td>
                 {{--<td>{{$logEntry->file_path}}</td>--}}
                 <td>{{ \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)')}}</td>
                 <td>
                 
-                <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['logEntryId' => $logEntry->id])}}" class="bg-amber-400 p-2 text-white rounded-md hover:shadow-lg text-xs font-thin">details</a>
+                <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['recordId' => $logEntry->id,'fileName'=> $filename])}}" class="bg-success-600 p-2 text-white rounded-md hover:shadow-lg text-xs font-thin">details</a>
                 
                 </td>
             </tr>

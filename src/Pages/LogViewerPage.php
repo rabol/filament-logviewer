@@ -21,7 +21,8 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static string $view = 'filament-log-viewer::log-viewer';
-    
+    protected static ?string $title = 'Log viewer';
+    protected static ?string $navigationLabel = 'Log viewer';
 
     protected function getActions(): array
     {
@@ -59,7 +60,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
                 Tables\Actions\LinkAction::make('viewlogfile')
                 ->label('View')
                 ->url(function (LogFile $record) {
-                    return LogViewerViewLogPage::getUrl(['record' => $record]);
+                    return LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
                 })
                 
                
