@@ -24,36 +24,19 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
     protected static ?string $title = 'Log viewer';
     protected static ?string $navigationLabel = 'Log viewer';
 
-    protected function getActions(): array
-    {
-        return [
-            
-        ];
-    }
-
-    public function viewLogFile($logFile)
-    {
-        dd($logFile);
-    }
-
-    protected function getTableQuery(): Builder 
+    protected function getTableQuery(): Builder
     {
         return LogFile::query();
-    } 
-     
-    protected function getTableColumns(): array 
+    }
+
+    protected function getTableColumns(): array
     {
         return [
             Tables\Columns\TextColumn::make('name')
-            ->searchable()            
+            ->searchable()
         ];
     }
- 
-    protected function getTableFilters(): array
-    {
-        return [];
-    }
- 
+
     protected function getTableActions(): array
     {
         return [
@@ -62,24 +45,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
                 ->url(function (LogFile $record) {
                     return LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
                 })
-                
-               
-         
+
         ];
     }
- 
-    protected function getTableBulkActions(): array
-    {
-        return [];
-    } 
-
-
-    protected function getViewData(): array
-    {
-        return [];
-    }
-
-   
-   
-
 }

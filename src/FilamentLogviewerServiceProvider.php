@@ -10,9 +10,8 @@ use Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage;
 
 class FilamentLogviewerServiceProvider extends PluginServiceProvider
 {
-
     public static string $name = 'filament-log-viewer';
- 
+
     protected function getPages(): array
     {
         return [
@@ -22,36 +21,10 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
         ];
     }
 
-    protected function getWidgets(): array
-    {
-        return [
-            //LogViewerWidget::class,
-        ];
-    }
-
     protected function getStyles(): array
     {
         return [
             'filament-log-viewer-styles' => __DIR__ . '/../resources/css/dist/filament-logviewer.css',
         ];
     }
-
-    protected function getScripts(): array
-    {
-        return [
-        ];
-    }
-
-    protected function getScriptData(): array
-    {
-        return [
-        ];
-    }
-
-    protected function getCommands(): array
-    {
-        return [];
-    }
-
-  
 }

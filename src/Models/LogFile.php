@@ -1,4 +1,5 @@
 <?php
+
 namespace Rabol\FilamentLogviewer\Models;
 
 use Sushi\Sushi;
@@ -22,12 +23,12 @@ class LogFile extends Model
     {
         $logFiles = LogReader::getLogFilenameList();
         $i = 1;
-        foreach($logFiles as $key => $value) {
+        foreach ($logFiles as $key => $value) {
             $rows[] =[
                 'id' => $i++,
                 'name' => $key,
                 'path' => $value,
-            ]; 
+            ];
         }
 
         return $rows;

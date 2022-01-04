@@ -7,16 +7,10 @@ use Filament\Pages;
 use Filament\Tables;
 use Filament\Pages\Page;
 use Illuminate\Support\Facades\Route;
-use Filament\Tables\Actions\LinkAction;
 use Filament\Pages\Actions\ButtonAction;
-use Illuminate\Database\Eloquent\Builder;
 use Jackiedo\LogReader\Facades\LogReader;
-use Rabol\FilamentLogviewer\Models\LogFile;
-use Filament\Tables\Concerns\InteractsWithTable;
-use Rabol\FilamentLogviewer\Models\LogFileEntry;
 
-
-class LogViewerViewLogPage extends Page 
+class LogViewerViewLogPage extends Page
 {
     private $logEntries;
     private $log;
@@ -25,10 +19,11 @@ class LogViewerViewLogPage extends Page
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static string $view = 'filament-log-viewer::log-viewer-view';
-    
+
     protected static bool $shouldRegisterNavigation = false;
 
     protected static ?string $title = 'View log file';
+
     protected function getActions(): array
     {
         return [
@@ -56,7 +51,7 @@ class LogViewerViewLogPage extends Page
             'filename' => $this->fileName,
         ];
     }
-    
+
     public static function getRoutes(): Closure
     {
         return function () {

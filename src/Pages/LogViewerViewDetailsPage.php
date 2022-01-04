@@ -16,7 +16,7 @@ use Filament\Tables\Concerns\InteractsWithTable;
 use Rabol\FilamentLogviewer\Models\LogFileEntry;
 use stdClass;
 
-class LogViewerViewDetailsPage extends Page 
+class LogViewerViewDetailsPage extends Page
 {
     private $recordId;
     private $fileName;
@@ -25,7 +25,7 @@ class LogViewerViewDetailsPage extends Page
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static string $view = 'filament-log-viewer::log-viewer-view-details';
-    
+
     protected static bool $shouldRegisterNavigation = false;
 
     protected static ?string $title = 'Log details';
@@ -59,7 +59,7 @@ class LogViewerViewDetailsPage extends Page
             'entry' => $this->entry,
         ];
     }
-    
+
     public static function getRoutes(): Closure
     {
         return function () {
