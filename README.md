@@ -32,8 +32,12 @@ php artisan vendor:publish --tag="filament-logviewer-views"
 This is the contents of the published config file:
 
 ```php
+
+// config for Rabol/FilamentLogviewer
 return [
+    'navigation_group' => 'System',
 ];
+
 ```
 
 ## Testing
