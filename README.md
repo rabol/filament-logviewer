@@ -1,5 +1,4 @@
-
-https://banners.beyondco.de/Filament%20Log%20Viewer.png?theme=light&packageManager=composer+require&packageName=rabol%2Ffilament-logviewer&pattern=architect&style=style_1&description=Simple+log+viewer+for+Filament+TALL+admin+panel&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg
+![Logo](https://banners.beyondco.de/Filament%20Log%20Viewer.png?theme=light&packageManager=composer+require&packageName=rabol%2Ffilament-logviewer&pattern=architect&style=style_1&description=Simple+log+viewer+for+Filament+TALL+admin+panel&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
 
 # Logviewer for Filament admin
 
