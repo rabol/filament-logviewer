@@ -17,13 +17,6 @@ You can install the package via composer:
 composer require rabol/filament-logviewer
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-logviewer-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -41,13 +34,6 @@ This is the contents of the published config file:
 ```php
 return [
 ];
-```
-
-## Usage
-
-```php
-$filament-logviewer = new Rabol\FilamentLogviewer();
-echo $filament-logviewer->echoPhrase('Hello, Rabol!');
 ```
 
 ## Testing
