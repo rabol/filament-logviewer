@@ -36,7 +36,6 @@ class LogViewerViewLogPage extends Page
 
     protected function getActions(): array
     {
-
         return [
             ButtonAction::make('back')
                 ->label('Back')

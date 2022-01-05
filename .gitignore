@@ -9,3 +9,7 @@ yarn-error.log
 _ide_helper.php
 .DS_Store
 node_modules
+build/phpstan/cache/nette.configurator/Container_70a8b46223.php
+build/phpstan/cache/nette.configurator/Container_70a8b46223.php.lock
+build/phpstan/cache/nette.configurator/Container_70a8b46223.php.meta
+.php-cs-fixer.cache
