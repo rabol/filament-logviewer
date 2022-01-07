@@ -52,10 +52,10 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
      */
     public function registerPolicies(): void
     {
-        $user_class = config('filament-logviewer::filament-logviewer.user_class','App\\Models\\User::class');
+        $model_class = config('filament-logviewer::filament-logviewer.user_class','\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
         $policy_class = config('filament-logviewer::filament-logviewer.user_class','Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
 
-        Gate::policy($user_class, $policy_class);
+        Gate::policy($model_class, $policy_class);
     }
     
     /**

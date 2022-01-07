@@ -2,6 +2,6 @@
 // config for Rabol/FilamentLogviewer
 return [
     'navigation_group' => 'System',
-    'user_class' => App\Models\User::class,
+    'model_class' => \Rabol\FilamentLogviewer\Models\LogFile::class,
     'policy_class' => \Rabol\FilamentLogviewer\Policies\LogFilePolicy::class,
 ];
