@@ -56,7 +56,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         ];
     }
 
-    public static function canDelete(LogFile $record): bool
+    public static function canDelete(Model $record): bool
     {
         return Gate::check('delete', $record);
     }

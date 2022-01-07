@@ -3,6 +3,7 @@
 namespace Rabol\FilamentLogviewer;
 
 use Filament\PluginServiceProvider;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Gate;
 use Rabol\FilamentLogviewer\Models\LogFile;
 use Rabol\FilamentLogviewer\Pages\LogViewerPage;
@@ -17,8 +18,12 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
     protected $policies = [
         LogFile::class => LogFilePolicy::class,
     ];
-
-
+    
+    /**
+     * getPages
+     *
+     * @return array
+     */
     protected function getPages(): array
     {
         return [
@@ -27,23 +32,41 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
             LogViewerViewDetailsPage::class,
         ];
     }
-
+    
+    /**
+     * getStyles
+     *
+     * @return array
+     */
     protected function getStyles(): array
     {
         return [
             'filament-log-viewer-styles' => __DIR__ . '/../resources/css/dist/filament-logviewer.css',
         ];
     }
-
-    public function registerPolicies()
+    
+    /**
+     * registerPolicies
+     *
+     * @return void
+     */
+    public function registerPolicies(): void
     {
-        foreach ($this->policies as $key => $value) {
-            Gate::policy($key, $value);
-        }
-    }
+        $user_class = config('filament-logviewer::filament-logviewer.user_class','App\\Models\\User::class');
+        $policy_class = config('filament-logviewer::filament-logviewer.user_class','Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
 
-    public function boot()
+        Gate::policy($user_class, $policy_class);
+    }
+    
+    /**
+     * boot
+     *
+     * @return void
+     */
+    public function boot(): void
     {
         parent::boot();
+
+        $this->registerPolicies();
     }
 }
