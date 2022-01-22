@@ -5,9 +5,12 @@
                 Log Files - view
             </h2>
         </x-slot>
-        <table class="w-full divide-y divide-gray-200">
-            <thead class="bg-gray-100">
-            <tr>
+        <div class="w-full inline-block rounded-lg border shadow-xl pt-2">
+
+
+        <table class="w-full text-left rtl:text-right divide-y table-auto">
+            <thead>
+            <tr class="bg-gray-50">
                 <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</td>
                 <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Environment
@@ -72,5 +75,6 @@
                 </tfoot>
             @endif
         </table>
+        </div>
     </div>
 </x-filament::page>
