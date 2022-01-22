@@ -40,6 +40,10 @@ return [
 
 ```
 
+
+## Note
+This package uses [calebporzio/sushi](https://github.com/calebporzio/sushi) package, which relies on sqlite
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
