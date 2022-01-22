@@ -20,13 +20,13 @@ composer require rabol/filament-logviewer
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="filament-logviewer-config"
+php artisan vendor:publish --tag="filament-log-viewer-config"
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="filament-logviewer-views"
+php artisan vendor:publish --tag="filament-log-viewer-views"
 ```
 
 This is the contents of the published config file:

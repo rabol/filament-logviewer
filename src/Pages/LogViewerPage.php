@@ -2,6 +2,7 @@
 
 namespace Rabol\FilamentLogviewer\Pages;
 
+use Closure;
 use Filament\Tables;
 use Filament\Pages\Page;
 use Illuminate\Support\Str;
@@ -26,6 +27,11 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
     protected static function getNavigationGroup(): ?string
     {
         return config('filament-log-viewer.navigation_group', null);
+    }
+
+    protected function getTableRecordUrlUsing(): Closure
+    {
+        return fn (Model $record): string => LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
     }
 
     protected function getTableQuery(): Builder
