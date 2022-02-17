@@ -44,6 +44,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         return [
             Tables\Columns\TextColumn::make('name')
                 ->searchable()
+                ->sortable()
         ];
     }
 
