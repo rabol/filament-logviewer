@@ -18,7 +18,8 @@
     "require": {
         "php": "^8.0",
         "calebporzio/sushi": "^2.3",
-        "illuminate/contracts": "^8.73"
+        "illuminate/contracts": "^8.73",
+        "jackiedo/log-reader": "^2.1"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
