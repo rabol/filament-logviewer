@@ -19,7 +19,7 @@
         "php": "^8.0",
         "calebporzio/sushi": "^2.3",
         "illuminate/contracts": "^8.73|^9.0",
-        "jackiedo/log-reader": "^2.1"
+        "jackiedo/log-reader": "^2.2"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
