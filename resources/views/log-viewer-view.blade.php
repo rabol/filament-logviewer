@@ -54,7 +54,8 @@
                         </td>
                         {{--<td>{{$logEntry->file_path}}</td>--}}
                         <td class="px-2 py-3 whitespace-nowrap">
-                            {{ \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)')}}
+                            {{-- \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)') --}}
+                            <p class="truncate">{{$logEntry->context}}</p>
                         </td>
                         <td class="px-2 py-3 whitespace-nowrap">
                             <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['recordId' => $logEntry->id,'fileName'=> $filename])}}"
