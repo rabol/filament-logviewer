@@ -12,17 +12,12 @@
             <thead>
             <tr class="bg-gray-50">
                 <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</td>
-                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Environment
-                </td>
-                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level
-                </td>
-                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Context
-                </td>
-                <td></td>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Environment</td>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level</td>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Context</td>
+                <td class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</td>
             </tr>
             </thead>
-
 
             <tbody class="bg-white divide-y divide-gray-200">
             @if($logEntries)
@@ -52,10 +47,8 @@
                                         </span>
                             @endif
                         </td>
-                        {{--<td>{{$logEntry->file_path}}</td>--}}
                         <td class="px-2 py-3 whitespace-nowrap truncate max-w-sm">
-                            {{-- \Illuminate\Support\Str::limit($logEntry->context, 40, ' (...)') --}}
-                            <span class="truncate">$logEntry->context</span>
+                            {{$logEntry->context}}
                         </td>
                         <td class="px-2 py-3 whitespace-nowrap">
                             <a href="{{ Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage::getUrl(['recordId' => $logEntry->id,'fileName'=> $filename])}}"
