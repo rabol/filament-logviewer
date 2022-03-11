@@ -23,12 +23,17 @@ class LogFile extends Model
     {
         $logFiles = LogReader::getLogFilenameList();
         $i = 1;
-        foreach ($logFiles as $key => $value) {
-            $rows[] =[
-                'id' => $i++,
-                'name' => $key,
-                'path' => $value,
-            ];
+        if($logFiles)
+        {
+            foreach ($logFiles as $key => $value) {
+                $rows[] =[
+                    'id' => $i++,
+                    'name' => $key,
+                    'path' => $value,
+                ];
+            }
+        } else {
+            $rows = [];
         }
 
         return $rows;
