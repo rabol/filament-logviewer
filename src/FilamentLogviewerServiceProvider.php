@@ -15,11 +15,13 @@ class FilamentLogviewerServiceProvider extends PluginServiceProvider
 {
     public static string $name = 'filament-log-viewer';
 
+
+/*
     protected $policies = [
         //LogFile::class => LogFilePolicy::class,
-        LogFile::class => config('filament-logviewer::filament-logviewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy'),
+        //LogFile::class => config('filament-logviewer::filament-logviewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy'),
     ];
-
+*/
     /**
      * getPages
      *
