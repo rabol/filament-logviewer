@@ -18,7 +18,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament-log-viewer::log-viewer';
+    protected static string $view = 'filament-logviewer::log-viewer';
 
     protected static ?string $title = 'Log viewer';
 
@@ -28,7 +28,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
 
     public static function getNavigationGroup(): ?string
     {
-        return config('filament-log-viewer.navigation_group', null);
+        return config('filament-logviewer.navigation_group', null);
     }
 
     protected function getTableRecordUrlUsing(): Closure

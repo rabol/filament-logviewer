@@ -2459,15 +2459,15 @@ return [
 	'projectExtensionFiles' => array (
 ),
 	'errorsCallback' => static function (): array { return array (
-  '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php' => 
+  '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php' => 
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Filament\\Panel::primaryColor().',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 24,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
        'nodeLine' => 24,
@@ -2480,10 +2480,10 @@ return [
     1 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to constant Amber on an unknown class Filament\\Support\\Color.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 26,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
        'nodeLine' => 26,
@@ -2496,10 +2496,10 @@ return [
     2 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to constant Gray on an unknown class Filament\\Support\\Color.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 27,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
        'nodeLine' => 27,
@@ -2512,10 +2512,10 @@ return [
     3 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to constant Amber on an unknown class Filament\\Support\\Color.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 28,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
        'nodeLine' => 28,
@@ -2528,10 +2528,10 @@ return [
     4 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to constant Rose on an unknown class Filament\\Support\\Color.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 29,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
        'nodeLine' => 29,
@@ -2544,10 +2544,10 @@ return [
     5 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to constant Green on an unknown class Filament\\Support\\Color.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 30,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
        'nodeLine' => 30,
@@ -2560,10 +2560,10 @@ return [
     6 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to constant Gray on an unknown class Filament\\Support\\Color.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'line' => 31,
        'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
+       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
        'nodeLine' => 31,
@@ -2750,13 +2750,6 @@ return [
       0 => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php',
     ),
   ),
-  '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php' => 
-  array (
-    'fileHash' => '69a0e955c20c6c7bb059395c578bceb23bbe3eb0',
-    'dependentFiles' => 
-    array (
-    ),
-  ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewer.php' => 
   array (
     'fileHash' => 'ece449b8ec469bd88b772b50bbbd8e253b296806',
@@ -2774,7 +2767,14 @@ return [
   ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php' => 
   array (
-    'fileHash' => '1d0ad015dee5d941ef6cb2e38ac76163d226ef7c',
+    'fileHash' => '5982d232e1bf81a3a6161cb2243a018056679ece',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php' => 
+  array (
+    'fileHash' => 'd7b38b2e1507334a778650b2c55dfe02a1707809',
     'dependentFiles' => 
     array (
     ),
@@ -2821,11 +2821,12 @@ return [
       0 => '/Users/rabol/code/web/packages/filament-logviewer/config/filament-log-viewer.php',
     ),
   ),
-  '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestFilamentLogviewer.php' => 
+  '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestsFilamentLogviewer.php' => 
   array (
     'fileHash' => 'ae868c5802397075d20cf80f44a24c794228db4f',
     'dependentFiles' => 
     array (
+      0 => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php',
     ),
   ),
 ),
@@ -2895,109 +2896,6 @@ return [
            'returnType' => 'int',
            'parameters' => 
           array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-      ),
-       'attributes' => 
-      array (
-      ),
-    )),
-  ),
-  '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php' => 
-  array (
-    0 => 
-    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'Rabol\\FilamentLogviewer\\FilamentLogviewer',
-       'phpDoc' => NULL,
-       'abstract' => false,
-       'final' => false,
-       'extends' => NULL,
-       'implements' => 
-      array (
-        0 => 'Filament\\Contracts\\Plugin',
-      ),
-       'usedTraits' => 
-      array (
-      ),
-       'traitUseAdaptations' => 
-      array (
-      ),
-       'statements' => 
-      array (
-        0 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getId',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'string',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        1 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'register',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'panel',
-               'type' => 'Filament\\Panel',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        2 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'boot',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'panel',
-               'type' => 'Filament\\Panel',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
           ),
            'attributes' => 
           array (
@@ -3527,6 +3425,109 @@ return [
            'returnType' => 'array',
            'parameters' => 
           array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'Rabol\\FilamentLogviewer\\FilamentLogviewerTheme',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'Filament\\Contracts\\Plugin',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'panel',
+               'type' => 'Filament\\Panel',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'boot',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'panel',
+               'type' => 'Filament\\Panel',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
           ),
            'attributes' => 
           array (
@@ -4457,7 +4458,7 @@ return [
       ),
     )),
   ),
-  '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestFilamentLogviewer.php' => 
+  '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestsFilamentLogviewer.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(

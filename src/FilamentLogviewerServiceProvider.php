@@ -16,9 +16,9 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentLogviewerServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filament-log-viewer';
+    public static string $name = 'filament-logviewer';
 
-    public static string $viewNamespace = 'filament-log-viewer';
+    public static string $viewNamespace = 'filament-logviewer';
 
     public function configurePackage(Package $package): void
     {
@@ -43,9 +43,9 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
             $package->hasConfigFile();
         }
 
-        //if (file_exists($package->basePath('/../database/migrations'))) {
-        //    $package->hasMigrations($this->getMigrations());
-        //}
+        if (file_exists($package->basePath('/../database/migrations'))) {
+            $package->hasMigrations($this->getMigrations());
+        }
 
         if (file_exists($package->basePath('/../resources/lang'))) {
             $package->hasTranslations();
@@ -82,12 +82,12 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
         Gate::policy($model_class, $policy_class);
 
         // Testing
-        //Testable::mixin(new TestsFilamentLogviewer());
+        Testable::mixin(new TestsFilamentLogviewer());
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return 'rabol/filament-log-viewer';
+        return 'rabol/filament-logviewer';
     }
 
     /**
@@ -96,7 +96,7 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-log-viewer-styles', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
+            Css::make('filament-logviewer-styles', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
         ];
     }
 

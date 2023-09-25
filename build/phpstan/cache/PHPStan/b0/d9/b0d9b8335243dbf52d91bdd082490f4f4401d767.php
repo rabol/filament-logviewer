@@ -5,23 +5,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
    'variableKey' => 'v1',
    'data' => 
   array (
-    '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php' => 
-    array (
-      0 => '69a0e955c20c6c7bb059395c578bceb23bbe3eb0',
-      1 => 
-      array (
-        0 => 'rabol\\filamentlogviewer\\filamentlogviewer',
-      ),
-      2 => 
-      array (
-        0 => 'rabol\\filamentlogviewer\\getid',
-        1 => 'rabol\\filamentlogviewer\\register',
-        2 => 'rabol\\filamentlogviewer\\boot',
-      ),
-      3 => 
-      array (
-      ),
-    ),
     '/Users/rabol/code/web/packages/filament-logviewer/src/Models/LogFile.php' => 
     array (
       0 => '54c512ad3beea7c9f9d58f22640ee38668672e18',
@@ -57,23 +40,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestFilamentLogviewer.php' => 
-    array (
-      0 => 'ae868c5802397075d20cf80f44a24c794228db4f',
-      1 => 
-      array (
-        0 => 'rabol\\filamentlogviewer\\testing\\testsfilamentlogviewer',
-      ),
-      2 => 
-      array (
-      ),
-      3 => 
-      array (
-      ),
-    ),
     '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php' => 
     array (
-      0 => '1d0ad015dee5d941ef6cb2e38ac76163d226ef7c',
+      0 => '5982d232e1bf81a3a6161cb2243a018056679ece',
       1 => 
       array (
         0 => 'rabol\\filamentlogviewer\\filamentlogviewerserviceprovider',
@@ -192,6 +161,37 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       1 => 
       array (
         0 => 'rabol\\filamentlogviewer\\filamentlogviewer',
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerTheme.php' => 
+    array (
+      0 => 'd7b38b2e1507334a778650b2c55dfe02a1707809',
+      1 => 
+      array (
+        0 => 'rabol\\filamentlogviewer\\filamentlogviewertheme',
+      ),
+      2 => 
+      array (
+        0 => 'rabol\\filamentlogviewer\\getid',
+        1 => 'rabol\\filamentlogviewer\\register',
+        2 => 'rabol\\filamentlogviewer\\boot',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestsFilamentLogviewer.php' => 
+    array (
+      0 => 'ae868c5802397075d20cf80f44a24c794228db4f',
+      1 => 
+      array (
+        0 => 'rabol\\filamentlogviewer\\testing\\testsfilamentlogviewer',
       ),
       2 => 
       array (

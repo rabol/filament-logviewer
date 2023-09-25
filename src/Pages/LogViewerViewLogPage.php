@@ -12,7 +12,7 @@ class LogViewerViewLogPage extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament-log-viewer::log-viewer-view';
+    protected static string $view = 'filament-logviewer::log-viewer-view';
 
     protected static bool $shouldRegisterNavigation = false;
 

@@ -9,7 +9,7 @@ class FilamentLogviewerPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'filament-log-viewer';
+        return 'filament-logviewer';
     }
 
     public function register(Panel $panel): void

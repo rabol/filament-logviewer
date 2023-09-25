@@ -12,13 +12,13 @@ class FilamentLogviewerTheme implements Plugin
 {
     public function getId(): string
     {
-        return 'filament-log-viewer';
+        return 'filament-logviewer';
     }
 
     public function register(Panel $panel): void
     {
         FilamentAsset::register([
-            Theme::make('filament-log-viewer', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
+            Theme::make('filament-logviewer', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
         ]);
 
         $panel
@@ -29,7 +29,7 @@ class FilamentLogviewerTheme implements Plugin
             ->dangerColor(Color::Rose)
             ->successColor(Color::Green)
             ->grayColor(Color::Gray)
-            ->theme('filament-log-viewer');
+            ->theme('filament-logviewer');
     }
 
     public function boot(Panel $panel): void
