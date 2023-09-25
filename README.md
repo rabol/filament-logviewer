@@ -39,6 +39,25 @@ return [
 ];
 
 ```
+## Usage
+
+Add the `Saade\FilamentLaravelLog\FilamentLaravelLogPlugin` to your panel config.
+
+```php
+use Rabol\FilamentLogviewer\FilamentLogviewerPlugin;
+
+class AdminPanelProvider extends PanelProvider
+{
+    public function panel(Panel $panel): Panel
+    {
+        return $panel
+            // ...
+            ->plugin(
+                FilamentLogviewerPlugin::make()
+            );
+    }
+}
+```
 
 
 ## Note
