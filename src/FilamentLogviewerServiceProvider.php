@@ -10,8 +10,9 @@ use Rabol\FilamentLogviewer\Pages\LogViewerPage;
 use Rabol\FilamentLogviewer\Policies\LogFilePolicy;
 use Rabol\FilamentLogviewer\Pages\LogViewerViewLogPage;
 use Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentLogviewerServiceProvider extends PluginServiceProvider
+class FilamentLogviewerServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-log-viewer';
 
