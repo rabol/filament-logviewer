@@ -32,8 +32,11 @@ class LogViewerViewDetailsPage extends Page
         };
     }
 
-    public function mount(string $recordId = null, string $fileName = null): void
+    public function mount(): void
     {
+        $recordId = request()->query('recordId');
+        $fileName = request()->query('fileName');
+
         $this->recordId = $recordId;
         $this->fileName = $fileName;
 

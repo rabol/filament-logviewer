@@ -32,8 +32,10 @@ class LogViewerViewLogPage extends Page
         };
     }
 
-    public function mount($fileName): void
+    public function mount(): void
     {
+        $fileName = request()->query('fileName');
+
         $this->log = LogReader::filename($fileName);
         $this->logEntries = $this->log->get(); // we need to paginate...
         self::$title = 'Log file: '.$fileName;
