@@ -3,10 +3,13 @@
 namespace Rabol\FilamentLogviewer\Pages;
 
 use Closure;
-use Filament\Pages\Actions\ButtonAction;
+use Filament\Actions\Action;
 use Filament\Pages\Page;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Jackiedo\LogReader\Facades\LogReader;
+use Rabol\FilamentLogviewer\Models\LogFile;
 
 class LogViewerViewDetailsPage extends Page
 {
@@ -46,7 +49,7 @@ class LogViewerViewDetailsPage extends Page
     protected function getActions(): array
     {
         return [
-            ButtonAction::make('back')
+            Action::make('back')
                 ->label('Back')
                 ->url(LogViewerViewLogPage::getUrl(['fileName' => $this->fileName])),
         ];
@@ -62,4 +65,5 @@ class LogViewerViewDetailsPage extends Page
             'entry' => $this->entry,
         ];
     }
+
 }

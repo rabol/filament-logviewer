@@ -2,11 +2,11 @@
 
 namespace Rabol\FilamentLogviewer\Pages;
 
-use Closure;
+
 use Filament\Pages\Page;
 use Filament\Tables;
 use Filament\Tables\Concerns\InteractsWithTable;
-use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Gate;
 use Jackiedo\LogReader\Facades\LogReader;
@@ -31,41 +31,26 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         return config('filament-logviewer.navigation_group', null);
     }
 
-    protected function getTableRecordUrlUsing(): Closure
+    public function table(Table $table): Table
     {
-        return fn (Model $record): string => LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
-    }
+        return $table
+            ->columns([
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable()
+                    ->sortable(),
+            ])->query(LogFile::query())
+            ->actions([
+                Tables\Actions\Action::make('viewlogfile')
+                    ->label('View')
+                    ->url(function (LogFile $record) {
+                        return LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
+                    }),
 
-    protected function getTableQuery(): Builder
-    {
-        return LogFile::query();
-    }
-
-    protected function getTableColumns(): array
-    {
-        return [
-            Tables\Columns\TextColumn::make('name')
-                ->searchable()
-                ->sortable(),
-        ];
-    }
-
-    protected function getTableActions(): array
-    {
-        return [
-
-            Tables\Actions\Action::make('viewlogfile')
-                ->label('View')
-                ->url(function (LogFile $record) {
-                    return LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
-                }),
-
-            Tables\Actions\Action::make('delete')
-                ->action('deleteLogFile')
-                ->requiresConfirmation()
-                ->hidden(fn ($record) => ! static::canDelete($record)),
-
-        ];
+                Tables\Actions\Action::make('delete')
+                    ->action(fn(LogFile $record) => $this->deleteLogFile($record))
+                    ->requiresConfirmation()
+                    ->hidden(fn ($record) => ! static::canDelete($record)),
+            ]);
     }
 
     public static function canDelete(Model $record): bool
@@ -73,11 +58,12 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         return Gate::check('delete', $record);
     }
 
-    public function deleteLogfile($record): void
+    public function deleteLogFile(LogFile $record): void
     {
         $log = LogReader::filename($record->name);
         $deleted = $log->delete();
         LogReader::removeLogFile();
         LogFile::boot();
+
     }
 }
