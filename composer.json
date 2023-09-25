@@ -65,7 +65,10 @@
         "laravel": {
             "providers": [
                 "Rabol\\FilamentLogviewer\\FilamentLogviewerServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Skeleton": "Rabol\\FilamentLogviewer\\Facades\\FilamentLogviewer"
+            }
         }
     },
     "minimum-stability": "dev",
