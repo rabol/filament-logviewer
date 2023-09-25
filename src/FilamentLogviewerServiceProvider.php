@@ -96,7 +96,7 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-log-viewer-styles', __DIR__.'/../resources/dist/filament-logviewer.css'),
+            Css::make('filament-log-viewer-styles', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
         ];
     }
 
