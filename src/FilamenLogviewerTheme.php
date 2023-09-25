@@ -8,7 +8,7 @@ use Filament\Support\Assets\Theme;
 use Filament\Support\Color;
 use Filament\Support\Facades\FilamentAsset;
 
-class FilamentLogviewer implements Plugin
+class FilamentLogviewerTheme implements Plugin
 {
     public function getId(): string
     {
