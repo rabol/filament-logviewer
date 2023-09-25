@@ -41,7 +41,7 @@ return [
 ```
 ## Usage
 
-Add the `Saade\FilamentLaravelLog\FilamentLaravelLogPlugin` to your panel config.
+Add the `Rabol\FilamentLogviewer\FilamentLogviewerPlugin` to your panel config.
 
 ```php
 use Rabol\FilamentLogviewer\FilamentLogviewerPlugin;
