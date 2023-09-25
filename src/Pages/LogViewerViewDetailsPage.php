@@ -32,7 +32,7 @@ class LogViewerViewDetailsPage extends Page
         };
     }
 
-    public function mount(string $recordId, string $fileName): void
+    public function mount(string $recordId = null, string $fileName = null): void
     {
         $this->recordId = $recordId;
         $this->fileName = $fileName;

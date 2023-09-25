@@ -2,7 +2,7 @@
     <div>
         <x-slot name="header">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Log Files - view
+                Log Files - view xx
             </h2>
         </x-slot>
         <div class="w-full inline-block rounded-lg border shadow-xl pt-2">

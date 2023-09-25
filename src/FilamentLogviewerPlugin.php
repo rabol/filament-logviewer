@@ -5,6 +5,8 @@ namespace Rabol\FilamentLogviewer;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Rabol\FilamentLogviewer\Pages\LogViewerPage;
+use Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage;
+use Rabol\FilamentLogviewer\Pages\LogViewerViewLogPage;
 
 class FilamentLogviewerPlugin implements Plugin
 {
@@ -19,6 +21,8 @@ class FilamentLogviewerPlugin implements Plugin
         $panel
             ->pages([
                 LogViewerPage::class,
+                LogViewerViewLogPage::class,
+                LogViewerViewDetailsPage::class,
             ]);
     }
 

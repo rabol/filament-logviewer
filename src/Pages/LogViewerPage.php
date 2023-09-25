@@ -53,15 +53,18 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
     protected function getTableActions(): array
     {
         return [
+
             Tables\Actions\Action::make('viewlogfile')
                 ->label('View')
                 ->url(function (LogFile $record) {
                     return LogViewerViewLogPage::getUrl(['fileName' => $record->name]);
                 }),
+
             Tables\Actions\Action::make('delete')
                 ->action('deleteLogFile')
                 ->requiresConfirmation()
                 ->hidden(fn ($record) => ! static::canDelete($record)),
+
         ];
     }
 
@@ -70,7 +73,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         return Gate::check('delete', $record);
     }
 
-    public function deleteLogfile($record)
+    public function deleteLogfile($record): void
     {
         $log = LogReader::filename($record->name);
         $deleted = $log->delete();

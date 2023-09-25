@@ -3,7 +3,7 @@
 namespace Rabol\FilamentLogviewer\Pages;
 
 use Closure;
-use Filament\Pages\Actions\ButtonAction;
+use Filament\Actions\Action;
 use Filament\Pages\Page;
 use Illuminate\Support\Facades\Route;
 use Jackiedo\LogReader\Facades\LogReader;
@@ -32,7 +32,7 @@ class LogViewerViewLogPage extends Page
         };
     }
 
-    public function mount(string $fileName): void
+    public function mount($fileName): void
     {
         $this->log = LogReader::filename($fileName);
         $this->logEntries = $this->log->get(); // we need to paginate...
@@ -43,7 +43,7 @@ class LogViewerViewLogPage extends Page
     protected function getActions(): array
     {
         return [
-            ButtonAction::make('back')
+            Action::make('back')
                 ->label('Back')
                 ->url(LogViewerPage::getUrl()),
         ];
