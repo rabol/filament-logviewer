@@ -2,6 +2,6 @@
 
 // variadic-method-Rabol\FilamentLogviewer\FilamentLogviewerServiceProvider-getCommands-/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => '1695629421-v4',
+   'variableKey' => '1695629598-v4',
    'data' => false,
 ));

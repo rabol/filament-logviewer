@@ -8,7 +8,7 @@ use Filament\Support\Assets\Theme;
 use Filament\Support\Color;
 use Filament\Support\Facades\FilamentAsset;
 
-class Skeleton implements Plugin
+class FilamentLogviewer implements Plugin
 {
     public function getId(): string
     {
@@ -18,7 +18,7 @@ class Skeleton implements Plugin
     public function register(Panel $panel): void
     {
         FilamentAsset::register([
-            Theme::make('skeleton', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
+            Theme::make('filament-log-viewer', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
         ]);
 
         $panel
@@ -29,7 +29,7 @@ class Skeleton implements Plugin
             ->dangerColor(Color::Rose)
             ->successColor(Color::Green)
             ->grayColor(Color::Gray)
-            ->theme('skeleton');
+            ->theme('filament-log-viewer');
     }
 
     public function boot(Panel $panel): void

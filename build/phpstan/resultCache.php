@@ -2578,22 +2578,6 @@ return [
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Protected method Rabol\\FilamentLogviewer\\Pages\\LogViewerPage::getNavigationGroup() overriding public method Filament\\Pages\\Page::getNavigationGroup() should also be public.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
-       'line' => 29,
-       'canBeIgnored' => false,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 29,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to an undefined property Illuminate\\Database\\Eloquent\\Model::$name.',
        'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
        'line' => 36,
@@ -2608,24 +2592,7 @@ return [
       array (
       ),
     )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to method make() of deprecated class Filament\\Actions\\StaticAction:
-Use `\\Filament\\Tables\\Actions\\Action` instead.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
-       'line' => 56,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 56,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-    3 => 
+    1 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to an undefined property Rabol\\FilamentLogviewer\\Models\\LogFile::$name.',
        'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
@@ -2641,24 +2608,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
       array (
       ),
     )),
-    4 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to method make() of deprecated class Filament\\Actions\\StaticAction:
-Use `\\Filament\\Tables\\Actions\\Action` instead.',
-       'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
-       'line' => 61,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 61,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-    5 => 
+    2 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to protected static method boot() of class Illuminate\\Database\\Eloquent\\Model.',
        'file' => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php',
@@ -2802,7 +2752,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
   ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php' => 
   array (
-    'fileHash' => '3b22f05527e31aeb8988f8c0fe2d31a76f6e1854',
+    'fileHash' => '69a0e955c20c6c7bb059395c578bceb23bbe3eb0',
     'dependentFiles' => 
     array (
     ),
@@ -2812,6 +2762,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
     'fileHash' => 'ece449b8ec469bd88b772b50bbbd8e253b296806',
     'dependentFiles' => 
     array (
+      0 => '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php',
     ),
   ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerPlugin.php' => 
@@ -2823,7 +2774,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
   ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php' => 
   array (
-    'fileHash' => 'b1129fb7912a25a2c3fa2ed7fe9084675f9aa2a8',
+    'fileHash' => '1d0ad015dee5d941ef6cb2e38ac76163d226ef7c',
     'dependentFiles' => 
     array (
     ),
@@ -2840,7 +2791,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
   ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php' => 
   array (
-    'fileHash' => '470d12d74eac4d874ebb55fee9ccbb40f48e38ce',
+    'fileHash' => '83adf1a1ee74e4457fa87a6a0a67fce40798de69',
     'dependentFiles' => 
     array (
       0 => '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerViewLogPage.php',
@@ -2872,7 +2823,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
   ),
   '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestFilamentLogviewer.php' => 
   array (
-    'fileHash' => '0ce83fb971c11e5d5e69cbcc78b0300b59d72ac3',
+    'fileHash' => 'ae868c5802397075d20cf80f44a24c794228db4f',
     'dependentFiles' => 
     array (
     ),
@@ -2959,7 +2910,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'Rabol\\FilamentLogviewer\\Skeleton',
+       'name' => 'Rabol\\FilamentLogviewer\\FilamentLogviewer',
        'phpDoc' => NULL,
        'abstract' => false,
        'final' => false,
@@ -3278,30 +3229,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'configurePackage',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * @return void
-     */',
-             'namespace' => 'Rabol\\FilamentLogviewer',
-             'uses' => 
-            array (
-              'asset' => 'Filament\\Support\\Assets\\Asset',
-              'css' => 'Filament\\Support\\Assets\\Css',
-              'filamentasset' => 'Filament\\Support\\Facades\\FilamentAsset',
-              'filamenticon' => 'Filament\\Support\\Facades\\FilamentIcon',
-              'gate' => 'Illuminate\\Support\\Facades\\Gate',
-              'testable' => 'Livewire\\Features\\SupportTesting\\Testable',
-              'filamentlogviewercommand' => 'Rabol\\FilamentLogviewer\\Commands\\FilamentLogviewerCommand',
-              'testsfilamentlogviewer' => 'Rabol\\FilamentLogviewer\\Testing\\TestsFilamentLogviewer',
-              'installcommand' => 'Spatie\\LaravelPackageTools\\Commands\\InstallCommand',
-              'package' => 'Spatie\\LaravelPackageTools\\Package',
-              'packageserviceprovider' => 'Spatie\\LaravelPackageTools\\PackageServiceProvider',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -3778,7 +3706,7 @@ Use `\\Filament\\Tables\\Actions\\Action` instead.',
            'name' => 'getNavigationGroup',
            'phpDoc' => NULL,
            'byRef' => false,
-           'public' => false,
+           'public' => true,
            'private' => false,
            'abstract' => false,
            'final' => false,

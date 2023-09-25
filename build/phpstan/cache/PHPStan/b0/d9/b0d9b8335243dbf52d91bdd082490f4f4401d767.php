@@ -7,10 +7,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/Users/rabol/code/web/packages/filament-logviewer/src/FilamenLogviewerTheme.php' => 
     array (
-      0 => '3b22f05527e31aeb8988f8c0fe2d31a76f6e1854',
+      0 => '69a0e955c20c6c7bb059395c578bceb23bbe3eb0',
       1 => 
       array (
-        0 => 'rabol\\filamentlogviewer\\skeleton',
+        0 => 'rabol\\filamentlogviewer\\filamentlogviewer',
       ),
       2 => 
       array (
@@ -59,7 +59,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/rabol/code/web/packages/filament-logviewer/src/Testing/TestFilamentLogviewer.php' => 
     array (
-      0 => '0ce83fb971c11e5d5e69cbcc78b0300b59d72ac3',
+      0 => 'ae868c5802397075d20cf80f44a24c794228db4f',
       1 => 
       array (
         0 => 'rabol\\filamentlogviewer\\testing\\testsfilamentlogviewer',
@@ -73,7 +73,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/rabol/code/web/packages/filament-logviewer/src/FilamentLogviewerServiceProvider.php' => 
     array (
-      0 => 'b1129fb7912a25a2c3fa2ed7fe9084675f9aa2a8',
+      0 => '1d0ad015dee5d941ef6cb2e38ac76163d226ef7c',
       1 => 
       array (
         0 => 'rabol\\filamentlogviewer\\filamentlogviewerserviceprovider',
@@ -131,7 +131,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/rabol/code/web/packages/filament-logviewer/src/Pages/LogViewerPage.php' => 
     array (
-      0 => '470d12d74eac4d874ebb55fee9ccbb40f48e38ce',
+      0 => '83adf1a1ee74e4457fa87a6a0a67fce40798de69',
       1 => 
       array (
         0 => 'rabol\\filamentlogviewer\\pages\\logviewerpage',
