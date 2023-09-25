@@ -11,11 +11,17 @@ use Jackiedo\LogReader\Facades\LogReader;
 class LogViewerViewLogPage extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
     protected static string $view = 'filament-log-viewer::log-viewer-view';
+
     protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $title = 'View log file';
+
     private $logEntries;
+
     private $log;
+
     private $fileName;
 
     public static function getRoutes(): Closure
@@ -30,7 +36,7 @@ class LogViewerViewLogPage extends Page
     {
         $this->log = LogReader::filename($fileName);
         $this->logEntries = $this->log->get(); // we need to paginate...
-        self::$title = 'Log file: ' . $fileName;
+        self::$title = 'Log file: '.$fileName;
         $this->fileName = $fileName;
     }
 

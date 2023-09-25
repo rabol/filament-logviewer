@@ -18,7 +18,7 @@ class Skeleton implements Plugin
     public function register(Panel $panel): void
     {
         FilamentAsset::register([
-            Theme::make('skeleton', __DIR__ . '/../resources/dist/filament-logviewer.css'),
+            Theme::make('skeleton', __DIR__.'/../resources/dist/filament-logviewer.css'),
         ]);
 
         $panel

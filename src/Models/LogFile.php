@@ -2,12 +2,9 @@
 
 namespace Rabol\FilamentLogviewer\Models;
 
-use Sushi\Sushi;
-use Illuminate\Support\Facades\File;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 use Jackiedo\LogReader\Facades\LogReader;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Sushi\Sushi;
 
 class LogFile extends Model
 {
@@ -23,10 +20,9 @@ class LogFile extends Model
     {
         $logFiles = LogReader::getLogFilenameList();
         $i = 1;
-        if($logFiles)
-        {
+        if ($logFiles) {
             foreach ($logFiles as $key => $value) {
-                $rows[] =[
+                $rows[] = [
                     'id' => $i++,
                     'name' => $key,
                     'path' => $value,

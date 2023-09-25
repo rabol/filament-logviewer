@@ -3,8 +3,8 @@
 namespace Rabol\FilamentLogviewer\Policies;
 
 use App\Models\User;
-use Rabol\FilamentLogviewer\Models\LogFile;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Rabol\FilamentLogviewer\Models\LogFile;
 
 class LogFilePolicy
 {
@@ -34,6 +34,7 @@ class LogFilePolicy
     {
         return true;
     }
+
     public function deleteAny(User $user)
     {
         return true;

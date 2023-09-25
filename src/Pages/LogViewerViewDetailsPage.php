@@ -11,11 +11,17 @@ use Jackiedo\LogReader\Facades\LogReader;
 class LogViewerViewDetailsPage extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
     protected static string $view = 'filament-log-viewer::log-viewer-view-details';
+
     protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $title = 'Log details';
+
     private $recordId;
+
     private $fileName;
+
     private $entry;
 
     public static function getRoutes(): Closure

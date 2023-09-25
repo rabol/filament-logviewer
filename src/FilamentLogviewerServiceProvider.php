@@ -2,30 +2,17 @@
 
 namespace Rabol\FilamentLogviewer;
 
-use Filament\PluginServiceProvider;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Gate;
-use Filament\Support\Facades\FilamentIcon;
-use Filament\Support\Facades\FilamentAsset;
-use Rabol\FilamentLogviewer\Commands\FilamentLogviewerCommand;
-use Rabol\FilamentLogviewer\Models\LogFile;
-use Rabol\FilamentLogviewer\Pages\LogViewerPage;
-use Rabol\FilamentLogviewer\Policies\LogFilePolicy;
-use Rabol\FilamentLogviewer\Testing\TestsFilamentLogviewer;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Rabol\FilamentLogviewer\Pages\LogViewerViewLogPage;
-use Rabol\FilamentLogviewer\Pages\LogViewerViewDetailsPage;
-use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
-use Illuminate\Filesystem\Filesystem;
+use Filament\Support\Facades\FilamentAsset;
+use Filament\Support\Facades\FilamentIcon;
+use Illuminate\Support\Facades\Gate;
 use Livewire\Features\SupportTesting\Testable;
+use Rabol\FilamentLogviewer\Commands\FilamentLogviewerCommand;
+use Rabol\FilamentLogviewer\Testing\TestsFilamentLogviewer;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
-use VendorName\Skeleton\Commands\SkeletonCommand;
-use VendorName\Skeleton\Testing\TestsSkeleton;
-
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentLogviewerServiceProvider extends PackageServiceProvider
 {
@@ -33,19 +20,13 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
 
     public static string $viewNamespace = 'filament-log-viewer';
 
-
-/**
-	 *
-	 * @param \Spatie\LaravelPackageTools\Package $package
-	 * @return void
-	 */
-	public function configurePackage(Package $package)
+    public function configurePackage(Package $package): void
     {
-	/*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
+        /*
+             * This class is a Package Service Provider
+             *
+             * More info: https://github.com/spatie/laravel-package-tools
+             */
         $package->name(static::$name)
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
@@ -79,7 +60,6 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
     {
     }
 
-
     public function packageBooted(): void
     {
         // Asset Registration
@@ -96,30 +76,27 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
         // Icon Registration
         FilamentIcon::register($this->getIcons());
 
-            $model_class = config('filament-logviewer::filament-logviewer.user_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
+        $model_class = config('filament-logviewer::filament-logviewer.user_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
         $policy_class = config('filament-logviewer::filament-logviewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
 
         Gate::policy($model_class, $policy_class);
 
-
         // Testing
-        Testable::mixin(new TestsFilamentLogviewer());
+        //Testable::mixin(new TestsFilamentLogviewer());
     }
-
 
     protected function getAssetPackageName(): ?string
     {
         return 'rabol/filament-log-viewer';
     }
 
-
-     /**
+    /**
      * @return array<Asset>
      */
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-log-viewer-styles', __DIR__ . '/../resources/dist/filament-logviewer.css'),
+            Css::make('filament-log-viewer-styles', __DIR__.'/../resources/dist/filament-logviewer.css'),
         ];
     }
 
@@ -161,63 +138,4 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
     {
         return [];
     }
-
-    /************** old..... chcek  */
-
-    /**
-     * getPages
-     *
-     * @return array
-     */
-    protected function getPages(): array
-    {
-        //return [
-        //    LogViewerPage::class,
-        //    LogViewerViewLogPage::class,
-        //    LogViewerViewDetailsPage::class,
-        //];
-    }
-
-    /**
-     * getStyles
-     *
-     * @return array
-     */
-    protected function getStyles(): array
-    {
-        //return [
-        //    'filament-log-viewer-styles' => __DIR__ . '/../resources/css/dist/filament-logviewer.css',
-        //];
-    }
-
-    /**
-     * registerPolicies
-     *
-     * @return void
-     */
-    //public function registerPolicies(): void
-    //{
-    //    $model_class = config('filament-logviewer::filament-logviewer.user_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
-    //    $policy_class = config('filament-logviewer::filament-logviewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
-    //
-    //    Gate::policy($model_class, $policy_class);
-    //}
-
-    /**
-     * boot
-     *
-     * @return void
-     */
-    //public function boot(): void
-    //{
-    //    parent::boot();
-    //
-    //    $this->registerPolicies();
-    //}
-
-
-
-
-
-
 }
