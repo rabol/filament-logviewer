@@ -3,6 +3,7 @@
 namespace Rabol\FilamentLogviewer\Pages;
 
 
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Pages\Page;
 use Filament\Tables;
 use Filament\Tables\Concerns\InteractsWithTable;
@@ -15,6 +16,7 @@ use Rabol\FilamentLogviewer\Models\LogFile;
 class LogViewerPage extends Page implements Tables\Contracts\HasTable
 {
     use InteractsWithTable;
+    use HasPageShield;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
@@ -28,7 +30,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
 
     public static function getNavigationGroup(): ?string
     {
-        return config('filament-logviewer.navigation_group', null);
+        return config('filament-log-viewer.navigation_group', null);
     }
 
     public function table(Table $table): Table
@@ -49,13 +51,8 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
                 Tables\Actions\Action::make('delete')
                     ->action(fn(LogFile $record) => $this->deleteLogFile($record))
                     ->requiresConfirmation()
-                    ->hidden(fn ($record) => ! static::canDelete($record)),
+                    ->hidden(fn($record) => !static::canDelete($record)),
             ]);
-    }
-
-    public static function canDelete(Model $record): bool
-    {
-        return Gate::check('delete', $record);
     }
 
     public function deleteLogFile(LogFile $record): void
@@ -65,5 +62,10 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
         LogReader::removeLogFile();
         LogFile::boot();
 
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Gate::check('delete', $record);
     }
 }
