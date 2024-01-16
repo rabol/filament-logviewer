@@ -37,7 +37,7 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
                     ->askToStarRepoOnGitHub('rabol/filament-logviewer');
             });
 
-        if (file_exists($package->basePath('/config/filament-log-viewer.php'))) {
+        if (file_exists($package->basePath('/../config/filament-logviewer.php'))) {
             $package->hasConfigFile();
         }
 
