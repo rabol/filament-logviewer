@@ -12,7 +12,7 @@
 
 /** @noinspection PhpParamsInspection,PhpMethodMayBeStaticInspection */
 
-
+declare(strict_types=1);
 
 class Container_96877e6014 extends _PHPStan_3334735b2\Nette\DI\Container
 {
