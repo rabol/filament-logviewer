@@ -66,8 +66,8 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
         // Icon Registration
         FilamentIcon::register($this->getIcons());
 
-        $model_class = config('filament-logviewer::filament-logviewer.user_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
-        $policy_class = config('filament-logviewer::filament-logviewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
+        $model_class = config('filament-logviewer.model_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
+        $policy_class = config('filament-logviewer.policy_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
 
         Gate::policy($model_class, $policy_class);
 
