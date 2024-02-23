@@ -2,17 +2,17 @@
 
 namespace Rabol\FilamentLogviewer\Pages;
 
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Closure;
 use Filament\Actions\Action;
 use Filament\Pages\Page;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Jackiedo\LogReader\Facades\LogReader;
-use Rabol\FilamentLogviewer\Models\LogFile;
 
 class LogViewerViewLogPage extends Page
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static string $view = 'filament-logviewer::log-viewer-view';
@@ -40,8 +40,8 @@ class LogViewerViewLogPage extends Page
         $fileName = request()->query('fileName');
 
         $this->log = LogReader::filename($fileName);
-        $this->logEntries = $this->log->get(); // we need to paginate...
-        self::$title = 'Log file: '.$fileName;
+        $this->logEntries = $this->log?->get()?->sortByDesc('date'); // we need to paginate...
+        self::$title = 'Log file: ' . $fileName;
         $this->fileName = $fileName;
     }
 

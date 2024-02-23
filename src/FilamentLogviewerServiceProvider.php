@@ -50,6 +50,13 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
         }
     }
 
+    protected function getCommands(): array
+    {
+        return [
+            FilamentLogviewerCommand::class,
+        ];
+    }
+
     public function packageBooted(): void
     {
         // Asset Registration
@@ -66,18 +73,13 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
         // Icon Registration
         FilamentIcon::register($this->getIcons());
 
-        $model_class = config('filament-logviewer::filament-logviewer.user_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
-        $policy_class = config('filament-logviewer::filament-logviewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
+        $model_class = config('filament-logviewer::filament-log-viewer.user_class', '\Rabol\\FilamentLogviewer\\Models\\LogFile::class');
+        $policy_class = config('filament-logviewer::filament-log-viewer.user_class', 'Rabol\\FilamentLogviewer\\Policies\\LogFilePolicy');
 
         Gate::policy($model_class, $policy_class);
 
         // Testing
         Testable::mixin(new TestsFilamentLogviewer());
-    }
-
-    protected function getAssetPackageName(): ?string
-    {
-        return 'rabol/filament-logviewer';
     }
 
     /**
@@ -86,15 +88,21 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-logviewer-styles', __DIR__.'/../resources/css/dist/filament-logviewer.css'),
+            Css::make('filament-logviewer-styles', __DIR__ . '/../resources/css/dist/filament-logviewer.css'),
         ];
     }
 
-    protected function getCommands(): array
+    protected function getAssetPackageName(): ?string
     {
-        return [
-            FilamentLogviewerCommand::class,
-        ];
+        return 'rabol/filament-logviewer';
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    protected function getScriptData(): array
+    {
+        return [];
     }
 
     /**
@@ -109,14 +117,6 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
      * @return array<string>
      */
     protected function getRoutes(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string, mixed>
-     */
-    protected function getScriptData(): array
     {
         return [];
     }

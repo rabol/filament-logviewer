@@ -5,10 +5,10 @@
                 {{ __('Log Files') }}
             </h2>
         </x-slot>
-    <div>
-      {{ $this->table }}
+        <div>
+            {{ $this->table }}
+        </div>
+
     </div>
-        
-    </div>
-    
+
 </x-filament::page>
