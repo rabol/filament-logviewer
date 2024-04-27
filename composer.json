@@ -21,7 +21,7 @@
         "filament/forms": "^3.0",
         "filament/tables": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0",
-        "illuminate/contracts": "^10.0",
+        "illuminate/contracts": "^10.0|^11.0",
         "calebporzio/sushi": "^2.3",
         "jackiedo/log-reader": "^2.2"
     },
