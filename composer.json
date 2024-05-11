@@ -23,7 +23,7 @@
         "spatie/laravel-package-tools": "^1.15.0",
         "illuminate/contracts": "^10.0|^11.0",
         "calebporzio/sushi": "^2.3",
-        "jackiedo/log-reader": "^2.2"
+        "jackiedo/log-reader": "dev-l11-compatibility"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -72,5 +72,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laravel-shift/Laravel-Log-Reader.git"
+        }
+    ]
 }
