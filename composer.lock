@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5493efd3e7a598b1aa9a9fa2a1f204f4",
+    "content-hash": "95e91a962803b582bb8047cbd778cacf",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -1878,27 +1878,28 @@
         },
         {
             "name": "jackiedo/log-reader",
-            "version": "dev-l11-compatibility",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-shift/Laravel-Log-Reader.git",
-                "reference": "08c9c6a6eb5f83ad545d6d7bb0e46672829e1236"
+                "url": "https://github.com/rabol/Laravel-Log-Reader.git",
+                "reference": "1ef781035125d5514b4ecfe5df21d3a99af8f3ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-shift/Laravel-Log-Reader/zipball/08c9c6a6eb5f83ad545d6d7bb0e46672829e1236",
-                "reference": "08c9c6a6eb5f83ad545d6d7bb0e46672829e1236",
+                "url": "https://api.github.com/repos/rabol/Laravel-Log-Reader/zipball/1ef781035125d5514b4ecfe5df21d3a99af8f3ac",
+                "reference": "1ef781035125d5514b4ecfe5df21d3a99af8f3ac",
                 "shasum": ""
             },
             "require": {
-                "illuminate/cache": "^9.0|^8.0|^7.0|^6.0|5.*|^10.0|^11.0",
-                "illuminate/config": "^9.0|^8.0|^7.0|^6.0|5.*|^10.0|^11.0",
-                "illuminate/console": "^9.0|^8.0|^7.0|^6.0|5.*|^10.0|^11.0",
-                "illuminate/http": "^9.0|^8.0|^7.0|^6.0|5.*|^10.0|^11.0",
-                "illuminate/pagination": "^9.0|^8.0|^7.0|^6.0|5.*|^10.0|^11.0",
-                "illuminate/support": "^9.0|^8.0|^7.0|^6.0|5.*|^10.0|^11.0",
-                "nesbot/carbon": "^2.0|~1.20|^3.0"
+                "illuminate/cache": "^11.0|^10.0|^9.0|^8.0|^7.0|^6.0|5.*",
+                "illuminate/config": "^11.0|^10.0|^9.0|^8.0|^7.0|^6.0|5.*",
+                "illuminate/console": "^11.0|^10.0|^9.0|^8.0|^7.0|^6.0|5.*",
+                "illuminate/http": "^11.0|^10.0|^9.0|^8.0|^7.0|^6.0|5.*",
+                "illuminate/pagination": "^11.0|^10.0|^9.0|^8.0|^7.0|^6.0|5.*",
+                "illuminate/support": "^11.0|^10.0|^9.0|^8.0|^7.0|^6.0|5.*",
+                "nesbot/carbon": "^2.0|~1.20"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1936,9 +1937,9 @@
                 "viewer"
             ],
             "support": {
-                "source": "https://github.com/laravel-shift/Laravel-Log-Reader/tree/l11-compatibility"
+                "source": "https://github.com/rabol/Laravel-Log-Reader/tree/master"
             },
-            "time": "2024-02-27T16:49:33+00:00"
+            "time": "2024-09-17T05:08:08+00:00"
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
@@ -11979,9 +11980,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "jackiedo/log-reader": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
