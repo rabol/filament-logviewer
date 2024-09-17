@@ -76,7 +76,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/laravel-shift/Laravel-Log-Reader.git"
+            "url": "https://github.com/rabol/Laravel-Log-Reader.git"
         }
     ]
 }
