@@ -5,11 +5,8 @@ namespace Rabol\FilamentLogviewer\Pages;
 use Closure;
 use Filament\Actions\Action;
 use Filament\Pages\Page;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Jackiedo\LogReader\Facades\LogReader;
-use Rabol\FilamentLogviewer\Models\LogFile;
 
 class LogViewerViewLogPage extends Page
 {
@@ -64,5 +61,4 @@ class LogViewerViewLogPage extends Page
             'filename' => $this->fileName,
         ];
     }
-
 }

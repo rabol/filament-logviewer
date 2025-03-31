@@ -5,11 +5,8 @@ namespace Rabol\FilamentLogviewer\Pages;
 use Closure;
 use Filament\Actions\Action;
 use Filament\Pages\Page;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Jackiedo\LogReader\Facades\LogReader;
-use Rabol\FilamentLogviewer\Models\LogFile;
 
 class LogViewerViewDetailsPage extends Page
 {
@@ -58,12 +55,11 @@ class LogViewerViewDetailsPage extends Page
     protected function getViewData(): array
     {
         return [
-            'header' => null, //'Log details: ' . $this->recordId . ' / ' . $this->fileName,
+            'header' => null, // 'Log details: ' . $this->recordId . ' / ' . $this->fileName,
             'footer' => null,
             'recordid' => $this->recordId,
             'filename' => $this->fileName,
             'entry' => $this->entry,
         ];
     }
-
 }

@@ -72,7 +72,7 @@ class FilamentLogviewerServiceProvider extends PackageServiceProvider
         Gate::policy($model_class, $policy_class);
 
         // Testing
-        Testable::mixin(new TestsFilamentLogviewer());
+        Testable::mixin(new TestsFilamentLogviewer);
     }
 
     protected function getAssetPackageName(): ?string

@@ -1,14 +1,15 @@
 includes:
-    - phpstan-baseline.neon
+    - ./vendor/larastan/larastan/extension.neon
 
 parameters:
-    level: 4
     paths:
-        - src
-        - config
-        - database
-    tmpDir: build/phpstan
-    checkOctaneCompatibility: true
-    checkModelProperties: true
-    checkMissingIterableValueType: false
+        - src/
 
+    # Level 9 is the highest level
+    level: 5
+
+    excludePaths:
+        - app/Filament
+        - tests
+        - vendor
+        - app/Http/Controllers/TestController.php

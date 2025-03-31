@@ -2,6 +2,4 @@
 
 namespace Rabol\FilamentLogviewer;
 
-class FilamentLogviewer
-{
-}
+class FilamentLogviewer {}

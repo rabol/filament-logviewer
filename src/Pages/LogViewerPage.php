@@ -2,7 +2,6 @@
 
 namespace Rabol\FilamentLogviewer\Pages;
 
-
 use Filament\Pages\Page;
 use Filament\Tables;
 use Filament\Tables\Concerns\InteractsWithTable;
@@ -47,7 +46,7 @@ class LogViewerPage extends Page implements Tables\Contracts\HasTable
                     }),
 
                 Tables\Actions\Action::make('delete')
-                    ->action(fn(LogFile $record) => $this->deleteLogFile($record))
+                    ->action(fn (LogFile $record) => $this->deleteLogFile($record))
                     ->requiresConfirmation()
                     ->hidden(fn ($record) => ! static::canDelete($record)),
             ]);
